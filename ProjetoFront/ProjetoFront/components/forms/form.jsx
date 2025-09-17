@@ -14,18 +14,26 @@ const[confirmarSenha, setConfirmarSenha] = useState('');
 
   function submit() {
     
+    event.preventDefault()
+
+    if(!senha || !confirmarSenha){
+      return alert('vazio')
+    }
 
     if (senha !== confirmarSenha) {
       alert('Senhas diferentes!');
       return;
+      
     }
 
-    console.log({ nome, email, senha });
     alert('Cadastro realizado com sucesso!');
+    window.location.href = "/login"
   }
 
   return (
-    <div className='form'>
+    <div >
+      <NavBar />
+
      
    <form onSubmit={submit}>
     <h1>cadastro</h1>
@@ -33,7 +41,7 @@ const[confirmarSenha, setConfirmarSenha] = useState('');
     <Inputs type='email' placeholder='email' value={email} onChange={ e=> setEmail(e.target.value)} />
     <Inputs type='password' placeholder='senha' value={senha} onChange={ e=> setSenha(e.target.value)} />
     <Inputs type='password' placeholder='confirme sua senha' value={confirmarSenha} onChange={ e=> setConfirmarSenha(e.target.value)} />
-   <Link to='/login'> <Button text = "cadastrar" /></Link>
+    <Button text = "cadastrar" />
     
     <Footer />
 

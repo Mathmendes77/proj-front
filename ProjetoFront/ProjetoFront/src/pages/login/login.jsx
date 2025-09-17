@@ -25,6 +25,7 @@ export default function Login() {
   return (
 
     <div>
+      <NavBar />
      
     <form onSubmit={submit}>
       

@@ -9,6 +9,7 @@
   box-sizing: border-box;
   position: relative;
   z-index: 10;
+  margin-right: 0;
   
 }
 
@@ -32,7 +33,7 @@
 }
 
 .navbar-links a:hover {
-  color: #ffd700;
+  color: #2b09a4;
 }
 
 @media (max-width: 700px) {
