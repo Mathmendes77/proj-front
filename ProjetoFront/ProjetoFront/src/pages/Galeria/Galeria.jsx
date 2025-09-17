@@ -1,7 +1,10 @@
 import React from "react";
 import "./galeria.css";
 import Navbar from "../../../components/nav/nav.jsx";
-
+import catre1 from "../../assets/catre1.jpg";
+import catre2 from "../../assets/catre2.jpg";
+import catre3 from "../../assets/catre3.jpg";
+import Footer from "../../../components/footer/footer";
 
 export default function GaleriaCatedrais() {
   return (
@@ -12,13 +15,23 @@ export default function GaleriaCatedrais() {
       <div className="imagens-galeria">
        
           <div className="imagem-item">
-           <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="" />
-           <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80"alt="" />
-           <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="" />
-           <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="" />
+            <img src={catre1} alt="" /> 
+            <p>Sagrada Família</p>
+          </div>
+       
+          <div className="imagem-item">
+            <img src={catre2} alt="" /> 
+            <p>Notre Dame</p>
+          </div>
+       
+          <div className="imagem-item">
+            <img src={catre3} alt="" /> 
+            <p>Notre Dame</p>
           </div>
         
+
       </div>
+      <Footer />
     </div>
   );
 }

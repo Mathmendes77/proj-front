@@ -4,6 +4,8 @@ import Inputs from "../../../components/input/inputs.jsx";
 import "./login.css";
 import Footer from  "../../../components/footer/footer.jsx";
 import NavBar from "../../../components/nav/nav.jsx";
+import Button from "../../../components/button/button.jsx";
+
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -13,14 +15,17 @@ export default function Login() {
    
     if (!email || !senha) {
       alert("Preencha todos os campos!");
+    }else{
+
+      console.log({ email, senha });
+      alert("Login realizado com sucesso!");
     }
-    console.log({ email, senha });
-    alert("Login realizado com sucesso!");
   }
 
   return (
+
     <div>
-      
+     
     <form onSubmit={submit}>
       
       <h1>login</h1>
@@ -29,9 +34,10 @@ export default function Login() {
 
       <Inputs type="password" placeholder="senha" value={senha} onChange={(e) => setSenha(e.target.value)}/>
 
-     <button type="submit">Entrar</button>
+      <Link to="/"><Button text = "entrar" /></Link>
+     
     <Link to="/cadastro">
-    <button type="button">Cadastre-se</button>
+    <Button text = "cadastrar" />
     </Link>
     <Footer />
     </form>
